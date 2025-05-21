@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rufina la Burra</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/rufina.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+    <header>
+        <img src="img/logonm.png" alt="Lg">
+        <div class="titulo">
+            <h1>Aprende en línea en la escuelita de Male</h1>
+            <p class="subtitulo">¡Aprender es una aventura en la escuelita de Male!</p>
+        </div>
+        <img src="img/logoit.png" alt="Ld">
+    </header>
+
+    <main>
+        <div id="introduccion">
+            <img id="rufiletra" src="img/rufiletra.png" alt="Rufina" class="rufiletra">
+            <div class="imagenes">
+                <img src="img/ajolote.png" alt="axolote" class="personaje" id="ajolote">
+                <p class="texto-medio">¡Acompáñame en esta aventura!</p>
+                <img src="img/rufi.png" alt="Rufina" class="rufina">
+            </div>
+
+            <button class="btn-comenzar" onclick="mostrarActividad('actividad1')">Comenzar</button>
+        </div>
+
+        <div id="actividad1" class="actividad oculto">
+            <div class="instruccion-header">
+                <h2 class="instruccion">Instrucción: Arrastra la letra que falta en el texto</h2>
+            </div>
+            <div class="texto-ejercicio">
+                <p>Rufina la burra</p>
+                <p class="segunda-linea">
+                    quería ser <span class="espacio-vacio" ondrop="drop(event)" ondragover="allowDrop(event)" data-correcta="f"></span>  amosa.
+                </p>
+            </div>
+            <div class="opciones">
+                <div class="opcion1" draggable="true" ondragstart="drag(event)" id="f">f</div>
+                <div class="opcion2" draggable="true" ondragstart="drag(event)" id="y">y</div>
+                <div class="opcion3" draggable="true" ondragstart="drag(event)" id="b">b</div>
+            </div>
+            <img src="img/chiquito_medallas.png" alt="Medalla" class="medalla oculto">
+            <button class="btn-siguiente" onclick="verifiRes()">Siguiente</button>
+            <img src="img/rufi.png" alt="Rufina" class="rufina2">
+        </div>
+
+        <div id="actividad2" class="actividad oculto">
+            <div class="instruccion-header">
+                <h2 class="instruccion">Instrucción: Arrastra la letra que falta en el texto</h2>
+            </div>
+            <div class="texto-ejercicio">
+                <p>Al pasar el circo por el pueblo,</p>
+                <p class="segunda-linea">
+                    vio a una orgullosa cebr<span class="espacio-vacio" ondrop="drop(event)" ondragover="allowDrop(event)" data-correcta="a"></span>  
+                </p>
+                <p>y quizo ser como ella.</p>
+                <br>    
+            </div>
+            <br></br>
+            <div class="opciones">
+                <div class="opcion4" draggable="true" ondragstart="drag(event)" id="a">a</div>
+                <div class="opcion5" draggable="true" ondragstart="drag(event)" id="e">e</div>
+                <div class="opcion6" draggable="true" ondragstart="drag(event)" id="u">u</div>
+            </div>
+            <img src="img/chiquito_medallas.png" alt="Medalla" class="medalla oculto">
+            <button class="btn-siguiente" onclick="verifiRes()">Siguiente</button>
+            <img src="img/ruficirco.png" alt="Rufina" class="rufina3">
+        </div>
+
+        <div id="actividad3" class="actividad oculto">
+            <div class="instruccion-header">
+                <h2 class="instruccion">Instrucción: Arrastra la letra que falta en el texto</h2>
+            </div>
+            <div class="texto-ejercicio_2">
+                <p>Un día, cuando pintaban la cerca,</p>
+                <p class="segunda-linea_2">
+                    se recarg<span class="espacio-vacio" ondrop="drop(event)" ondragover="allowDrop(event)" data-correcta="ó" style="white-space: nowrap;"></span> sin hacer ruido.
+                </p>
+                <p>Asi, cuando Don Lorenzo</p>
+                <p>pasó la brocha...</p>
+            </div>
+            <div class="opciones">
+                <div class="opcion4" draggable="true" ondragstart="drag(event)" id="o">o</div>
+                <div class="opcion5" draggable="true" ondragstart="drag(event)" id="ó">ó</div>
+                <div class="opcion6" draggable="true" ondragstart="drag(event)" id="ö">ö</div>
+            </div>
+            <img src="img/chiquito_medallas.png" alt="Medalla" class="medalla oculto">
+            <button class="btn-siguiente" onclick="verifiRes()">Siguiente</button>
+            <img src="img/ruficerca.png" alt="Rufina" class="rufina4">
+        </div>
+
+
+        <div id="actividad4" class="actividad oculto">
+            <div class="instruccion-header">
+                <h2 class="instruccion">Instrucción: Arrastra la letra que falta en el texto</h2>
+            </div>
+            <div class="texto-ejercicio">
+                <p class="rufiarco">¡RUFINA QUEDÓ CONVERTIDA<br>EN UNA HERMOSA CEBRA!</p>
+                <p class="segunda-linea">
+                    Esa noche escapó del co<span class="espacio-vacio" ondrop="drop(event)" ondragover="allowDrop(event)" data-correcta="rr" style="white-space: nowrap;"></span> al
+                </p>
+                <p>y se fue al circo.</p>
+            </div>
+            <div class="opciones">
+                <div class="opcion4" draggable="true" ondragstart="drag(event)" id="r">r</div>
+                <div class="opcion5" draggable="true" ondragstart="drag(event)" id="rr">rr</div>
+                <div class="opcion6" draggable="true" ondragstart="drag(event)" id="l">l</div>
+            </div>
+            <img src="img/chiquito_medallas.png" alt="Medalla"  class="medalla oculto">
+            <button class="btn-siguiente" onclick="verifiRes()">Siguiente</button>
+            <img src="img/ruficirze.png" alt="Rufina" class="rufina5">
+        </div>
+        
+
+        <div id="actividad5" class="actividad oculto">
+            <div class="instruccion-header">
+                <h2 class="instruccion">Instrucción: Arrastra la letra que falta en el texto</h2>
+            </div>
+            <div class="texto-ejercicio">
+                <p >Se imaginaba la marquesina:</p>
+                <p class="segunda-linea">
+                    Rufina, la cebra intr<span class="espacio-vacio" ondrop="drop(event)" ondragover="allowDrop(event)" data-correcta="é" style="white-space: nowrap;"></span>pida.
+                </p>
+                <p>Y corrió ycorrió tejiendo sueños<br>en su cabéza.</p>
+            </div>
+            <div class="opciones">
+                <div class="opcion7" draggable="true" ondragstart="drag(event)" id="e">e</div>
+                <div class="opcion8" draggable="true" ondragstart="drag(event)" id="é">é</div>
+                <div class="opcion9" draggable="true" ondragstart="drag(event)" id="i">i</div>
+            </div>
+            <img src="img/chiquito_medallas.png" alt="Medalla"  class="medalla oculto">
+            <button class="btn-siguiente_2" onclick="verifiRes()">Siguiente</button>
+            <img src="img/ruficirlo.png" alt="Rufina" class="rufina5">
+        </div>
+
+
+        <div id="actividad6" class="actividad oculto">
+            <div class="instruccion-header">
+                <h2 class="instruccion">Instrucción: Arrastra la letra que falta en el texto</h2>
+            </div>
+            <div class="texto-ejercicio">
+                <p >De pronto, una gota de agua<br>cayó en su nariz.</p>
+                <p class="segunda-linea">
+                    Empezaba a llo<span class="espacio-vacio" ondrop="drop(event)" ondragover="allowDrop(event)" data-correcta="v" style="white-space: nowrap;"></span>er
+                </p>
+                <p>Y busco refugio.</p>
+            </div>
+            <div class="opciones">
+                <div class="opcion7" draggable="true" ondragstart="drag(event)" id="b">b</div>
+                <div class="opcion8" draggable="true" ondragstart="drag(event)" id="v">v</div>
+                <div class="opcion9" draggable="true" ondragstart="drag(event)" id="w">w</div>
+            </div>
+            <img src="img/chiquito_medallas.png" alt="Medalla"  class="medalla oculto">
+            <button class="btn-siguiente_2" onclick="verifiRes()">Siguiente</button>
+            <img src="img/rufilluvi1.png" alt="Rufina" class="rufina6_a">
+            <img src="img/rufilluvi.png" alt="Rufina" class="rufina6">
+        </div>
+
+
+        <div id="actividad7" class="actividad oculto">
+            <div class="instruccion-header">
+                <h2 class="instruccion">Instrucción: Arrastra la letra que falta en el texto</h2>
+            </div>
+            <div class="texto-ejercicio">
+                <p >Pero fue en vano... la lluvia despintó<br>sus rayas blancas.</p>
+                <p class="segunda-linea">
+                    Cansada, mo<span class="espacio-vacio" ondrop="drop(event)" ondragover="allowDrop(event)" data-correcta="j" style="white-space: nowrap;"></span>ada y triste,
+                </p>
+                <p>Rufina volvio al corral.</p>
+            </div>
+            <div class="opciones">
+                <div class="opcion7" draggable="true" ondragstart="drag(event)" id="j">j</div>
+                <div class="opcion8" draggable="true" ondragstart="drag(event)" id="g">g</div>
+                <div class="opcion9" draggable="true" ondragstart="drag(event)" id="b">b</div>
+            </div>
+            <img src="img/chiquito_medallas.png" alt="Medalla"  class="medalla oculto">
+            <button class="btn-siguiente_2" onclick="verifiRes()">Siguiente</button>
+            <img src="img/rufitriste.png" alt="Rufina" class="rufina7">
+        </div>
+
+
+        <div id="actividad8" class="actividad oculto">
+            <div class="instruccion-header">
+                <h2 class="instruccion">Instrucción: Arrastra la letra que falta en el texto</h2>
+            </div>
+            <div class="texto-ejercicio">
+                <p>Ahí le contó a un burro amigo su historia.</p>
+                <p class="segunda-linea">
+                    -¡Pero qué ocurrencia el querer ser  </p>
+                <p> <span class="espacio-vacio" ondrop="drop(event)" ondragover="allowDrop(event)" data-correcta="c" style="white-space: nowrap;"></span>ebra, si eres tan bonita! -le dijo.</p>    
+                </p>
+            </div>
+            <div class="opciones">
+                <div class="opcion10" draggable="true" ondragstart="drag(event)" id="z">z</div>
+                <div class="opcion11" draggable="true" ondragstart="drag(event)" id="s">s</div>
+                <div class="opcion12" draggable="true" ondragstart="drag(event)" id="c">c</div>
+            </div>
+            <img src="img/chiquito_medallas.png" alt="Medalla"  class="medalla oculto">
+            <button class="btn-siguiente_3" onclick="verifiRes()">Siguiente</button>
+            <img src="img/rufiburr.png" alt="Rufina" class="rufina8">
+        </div>
+
+
+        <div id="actividadFinal" style="display:none; position: relative; height: 100vh; background: #ffffff; text-align: center;">
+            <img src="img/Felicidades.jpg" alt="Felicidades" id="zoomImg" style="width: 300px; margin-top: 25vh;">
+            <audio id="musicaFinal" autoplay>
+              <source src="victoria.mp3" type="audio/mpeg">
+            </audio>
+            <canvas id="confettiCanvas"></canvas>
+          </div>
+
+
+          <div id="actividadResultados" style="display: none; text-align: center;">
+            <h2>Resultados</h2>
+            <table>
+                <tr><td>Aciertos:</td><td id="aciertos">0</td></tr>
+                <tr><td>Errores:</td><td id="errores">0</td></tr>
+            </table>
+            <button onclick="location.href='index.html'">Volver al inicio</button>
+        </div>
+
+    </main>
+    <audio id="sonidoExplosion">
+        <source src="audio/fune.mp3" type="audio/mpeg">
+    </audio>
+
+    <footer class="foo">
+        <p>Tecnológico Nacional de México - Campus Pachuca | © 2025</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/rufina.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Viaje</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/viaje.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="img/logonm.png" alt="Logo" />
+        <div class="titulo">
+            <h1>Aprende en línea en la escuelita de Male</h1>
+            <p class="subtitulo">¡Aprender es una aventura en la escuelita de Male!</p>
+        </div>
+        <img src="img/logoit.png" alt="Logo" />
+    </header>
+
+    <canvas id="resorteraCanvas" class="canvas-superior"></canvas>
+
+    <main>
+        <div id="introduccion">
+            <img id="rufiletra" src="img/viajeletra.png" alt="Viaje" class="viajeletra" />
+            <div class="imagenes">
+                <img src="img/etoloja.png" alt="Axolote" class="personaje" id="ajolote" />
+                <p class="texto-medio">¡Acompáñame en esta aventura!</p>
+                <img src="img/raton.png" alt="Ratón" class="raton" />
+            </div>
+            <button class="btn-comenzar" onclick="mostrarActividad('actividad1')">Comenzar</button>
+        </div>
+
+        <div id="actividad1" class="actividad oculto">
+            <div class="instruccion-header">
+                <div class="actividad-resortera">
+                    <h2 class="instruccion">Instrucción: Lanza la palabra correcta al espacio en blanco</h2>
+
+                    <div class="escenario">
+                        <p class="zona-texto">
+                            Había una vez un <span class="espacio-vacio" data-correcta="ratón"></span> <br> quería ver a su madre.
+                        </p>
+                        <img src="img/raton1.png" alt="Ratón" class="raton1" />
+                        <div class="zona-palabras">
+                            <div class="palabra" data-palabra="ratón">ratón</div>
+                            <div class="palabra" data-palabra="zapato">zapato</div>
+                            <div class="palabra" data-palabra="libro">libro</div>
+                        </div>
+                    </div>
+
+                    <div class="escenario">
+                        <p class="zona-texto">
+                            Entonces se compró un <span class="espacio-vacio" data-correcta="carro"></span>
+                        </p>
+                        <img src="img/ratoncar.png" alt="Ratón con carro" class="raton2" />
+                        <div class="zona-palabras">
+                            <div class="palabra" data-palabra="queso">queso</div>
+                            <div class="palabra" data-palabra="carro">carro</div>
+                            <div class="palabra" data-palabra="libro">libro</div>
+                        </div>
+                    </div>
+
+                    <div class="escenario">
+                        <p class="zona-texto">
+                            y se puso en camino hacia la <span class="espacio-vacio" data-correcta="casa"></span> <br> de su madre.
+                        </p>
+                        <img src="img/ratoncas.png" alt="Ratón" class="raton3" />
+                        <div class="zona-palabras">
+                            <div class="palabra" data-palabra="queso">queso</div>
+                            <div class="palabra" data-palabra="zapato">zapato</div>
+                            <div class="palabra" data-palabra="casa">casa</div>
+                        </div>
+                    </div>
+
+                    <div class="escenario">
+                        <p class="zona-texto">
+                            Viajó y viajó y <span class="espacio-vacio" data-correcta="viajó"></span> <br>
+                        </p>
+                        <img src="img/ratoncar2.png" alt="Ratón" class="raton3" />
+                        <div class="zona-palabras">
+                            <div class=" palabra" data-palabra="viajó">viajó</div>
+                            <div class="palabra" data-palabra="zapato">zapato</div>
+                            <div class="palabra" data-palabra="casa">casa</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-comenzar1" onclick="mostrarActividad('actividad2')">Siguiente</button>
+        </div>
+
+        <div id="actividad2" class="oculto">
+            <div class="instruccion-header">
+                <div class="actividad-resortera">
+                    <h2 class="instruccion">Instrucción: Lanza la palabra correcta al espacio en blanco</h2>
+
+                    <div class="escenario">
+                        <p class="zona-texto">
+                            Hasta que el coche se hizo <span class="espacio-vacio" data-correcta="pedazos"></span> <br>
+                        </p>
+                        <img src="img/ratoncar3.png" alt="Ratón" class="raton3" />
+                        <div class="zona-palabras">
+                            <div class="palabra" data-palabra="viajó">viajó</div>
+                            <div class="palabra" data-palabra="pedazos">pedazos</div>
+                            <div class="palabra" data-palabra="casa">casa</div>
+                        </div>
+                    </div>
+
+                    <div class="escenario">
+                        <p class="zona-texto">
+                            pruebaaa <span class="espacio-vacio" data-correcta="ratón"></span> <br> quería ver a su madre.
+                        </p>
+                        <img src="img/raton1.png" alt="Ratón" class="raton1" />
+                        <div class="zona-palabras">
+                            <div class="palabra" data-palabra="ratón">ratón</div>
+                            <div class="palabra" data-palabra="zapato">zapato</div>
+                            <div class="palabra" data-palabra="libro">libro</div>
+                        </div>
+                    </div>
+
+                    <div class="escenario">
+                        <p class="zona-texto">
+                            Entonces se compró un <span class="espacio-vacio" data-correcta="carro"></span>
+                        </p>
+                        <img src="img/ratoncar.png" alt="Ratón" class="raton2" />
+                        <div class="zona-palabras">
+                            <div class="palabra" data-palabra="queso">queso</div>
+                            <div class="palabra" data-palabra="carro">carro</div>
+                            <div class="palabra" data-palabra="libro">libro</div>
+                        </div>
+                    </div>
+
+                    <div class="escenario">
+                        <p class="zona-texto">
+                            y se puso en camino hacia la <span class="espacio-vacio" data-correcta="casa"></span> <br> de su madre.
+                        </p>
+                        <img src="img/ratoncas.png" alt="Ratón" class="raton3" />
+                        <div class="zona-palabras">
+                            <div class="palabra" data-palabra="queso">queso</div>
+                            <div class="palabra" data-palabra="zapato">zapato</div>
+                            <div class="palabra" data-palabra="casa">casa</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-comenzar1" onclick="mostrarActividad('actividad3')">Siguiente</button>
+        </div>
+
+    </main>
+
+    <audio id="sonidoExplosion">
+        <source src="audio/fune.mp3" type="audio/mpeg" />
+    </audio>
+
+    <footer class="foo">
+        <p>Tecnológico Nacional de México - Campus Pachuca | © 2025</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/viaje.js"></script>
+</body>
+
+</html> 

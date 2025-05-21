@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los zapatos del novio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/zapa.css">
+</head>
+<body>
+<!--header mi todo tibio, no te me vayas a confundir-->
+    <header>
+        <img src="img/logonm.png" alt="Lg">
+        <div class="titulo">
+            <h1>Aprende en línea en la escuelita de Male</h1>
+            <p class="subtitulo">¡Aprender es una aventura en la escuelita de Male!</p>
+        </div>
+        <img src="img/logoit.png" alt="Ld">
+    </header>
+<!--portada mi todo guango-->
+    <main>
+        <div id="introduccion">
+            <img id="noviletra" src="img/noviletra.png" alt="novio" class="noviletra">
+            <div class="imagenes">
+                <img src="img/ajolote.png" alt="Axolote" class="personaje" id="ajolote">
+                <p class="texto-medio">¡Acompáñame en esta aventura!</p>
+                <img src="img/novi.png" alt="novio" class="novio">
+            </div>
+            <button class="btn-comenzar" onclick="mostrarActividad('actividad1')">Comenzar</button>
+        </div>
+    <div id="actividad1" class="actividad oculto">
+        <div class="instruccion-header">
+            <h2 class="instruccion">Instrucción: Da click a los signos hasta que sea el correcto :D</h2>
+        </div>
+        <div class="texto-ejercicio">
+            <p style="white-space: nowrap;">
+            <p class="primer-linea"><button class="boton-signo" data-correcto="¿">?</button>No puedo ir a mi boda con los zapatos tan sucios<button class="boton-signo" data-correcto="¿">?</button>
+            </p>
+            <p class="segunda-linea">dijo el novio. Entonces le preguntó a la yerba:</p>
+            <p class="primer-linea"><button class="boton-signo" data-correcto="¿">?</button>Podrías ayudarme a limpiar mis zapatos?</p>
+            <p class="segunda-linea">la yerba respondió:</p>
+            <p class="primer-linea"><button class="boton-signo" data-correcto="¿">?</button>No!, No quiero ayudarte.</p>
+        
+        <button class="btn-siguiente" onclick="revisarSignos()">Siguiente</button>
+        <img src="img/novi2.png" alt="novio2" class="novi2">
+    </div>
+<!--igual pueden y los voy a poner como "pagina", entonces esta seria la pagina 2-->
+    <div id="actividad2" class="actividad oculto">
+        <h2>blah blah blah</h2>
+        <p>meh meh meh</p>
+    </div>
+</main>
+    <audio id="sonidoExplosion">
+        <source src="audio/fune.mp3" type="audio/mpeg">
+    </audio>
+    <footer class="foo">
+        <p>Tecnológico Nacional de México - Campus Pachuca | © 2025</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/zapa.js"></script>
+</body>
+</html>
