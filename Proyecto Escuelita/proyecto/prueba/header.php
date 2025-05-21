@@ -1,0 +1,5 @@
+<header>
+    <img src="img/logonm.png" alt="Logo Izquierdo">
+    <h1>Aprende en línea en la escuelita de Male</h1>
+    <img src="img/logoit.png" alt="Logo Derecho">
+</header>
